@@ -12,58 +12,85 @@ html {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
-header {
+.header {
   background-color: #3498db;
-  color: white;
-  text-align: center;
-  padding: 50px 0;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-nav {
-  background-color: #2980b9;
-  padding: 10px 0;
-  position: sticky;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 }
 
-nav ul {
-  list-style-type: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: white;
+  margin: 0;
+  padding: 15px 0;
+}
+
+.main-nav ul {
+  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
 }
 
-nav ul li {
-  margin: 0 15px;
+.main-nav li {
+  margin-left: 20px;
 }
 
-nav ul li a {
+.main-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 15px 0;
+  display: block;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
+.main-nav a:hover {
   color: #f1c40f;
+}
+
+.main-nav i {
+  margin-right: 5px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
 }
 
 .content {
   display: flex;
   flex-direction: row-reverse;
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 80px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -91,6 +118,7 @@ nav ul li a:hover {
 
 #name {
   font-weight: bold;
+  font-size: large;
 }
 
 section {
@@ -115,63 +143,6 @@ h2 {
 p {
   margin-bottom: 20px;
   text-align: justify;
-}
-
-.skill-bar {
-  background-color: #ecf0f1;
-  height: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  background-color: #3498db;
-  height: 100%;
-  width: 0;
-  transition: width 1s;
-}
-
-.contact-form {
-  display: grid;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-footer {
-  background-color: #34495e;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
-
-  .profile-image {
-    max-width: 100%;
-    position: static;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
 }
 
 .skill-bar {
@@ -227,4 +198,123 @@ footer {
 
 #contact a:hover {
   background-color: #ff6347;
+}
+
+footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* スライドショーのスタイル */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dot-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #3498db;
+    padding: 20px;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .main-nav li {
+    margin: 10px 0;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .profile-image {
+    max-width: 100%;
+    position: static;
+  }
 }

@@ -9,52 +9,57 @@
 </head>
 
 <body>
-  <header>
-    <h1>有村大旭</h1>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">自己紹介</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about"><i class="fas fa-user"></i> 名前</a></li>
+          <li><a href="#job"><i class="fas fa-utensils"></i> 好きな食べ物</a></li>
+          <li><a href="#hobby"><i class="fas fa-heart"></i> マイブーム</a></li>
+          <li><a href="#programming"><i class="fas fa-code"></i> プログラミング経験</a></li>
+          <li><a href="#message"><i class="fas fa-comment"></i> ひとこと</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">自己紹介</a></li>
-      <li><a href="#job">職業</a></li>
-      <li><a href="#hobby">趣味</a></li>
-      <li><a href="#programming">プログラミング経験</a></li>
-      <li><a href="#message">ひとこと</a></li>
-      <li><a href="#contact">お問い合わせ</a></li>
-    </ul>
-  </nav>
 
   <div class="container">
     <div class="content">
       <div class="profile-image">
         <img src="images/IMG_4634.jpg" alt="山田太郎のプロフィール写真">
       </div>
+      
       <div class="profile-info">
         <section id="about">
-          <h2>自己紹介</h2>
-          <p>こんにちは、<span id="name">有村大旭(アリムラ ヒロアキ)</span>です。今年の3月に近大経済学部国際経済学科を卒業したばかりの新社会人です！
-            チューター他2名は近大生なのに僕だけ社会人です、、、(大学生に戻りたくなります) <br>
-            G's CAMP KINDAI#13に参加していたので皆さんと近い距離でお話できると思います！
+          <h2>名前</h2>
+          <p>こんにちは、<span id="name">有村大旭(アリムラ ヒロアキ)</span>です。近畿大学経済学部国際経済学科を卒業しました！ <br>
           </p>
         </section>
 
         <section id="job">
-          <h2>職業</h2>
-          <p><span id="name">システムエンジニア</span>をやってます！ まだ研修中ですが、大好きなプログラミングに触れられるので毎日充実しています！
-            IT企業の就活に興味ある人は気軽に話しかけてください！　<br>
-            起業は越智くんに質問するか、キンキュバに行ってみてください！
+          <h2>好きな食べ物</h2>
+          <p><span id="name">からあげ</span>大好きです！ からあげを食べた数なら負けません！
+            最近、自炊サボってやよい軒のからあげ定食ばかり食べてます！
+            美味しいからあげ屋さんあれば、教えてください！
+            <br>
           </p>
         </section>
 
         <section id="about">
-          <h2>趣味</h2>
+          <h2>マイブーム</h2>
           <p>
           <ol>
-            <li>最近、ディズニープラスに入ってマーベル作品を観まくってます！ベタですけど、アイアンマンが大好きです！</li>
-            <li>洋ロックがめっちゃ好きです！特にNirvana, Foofighters, Queenなどなど</li>
-            <li>お笑い好きです！特にロバート、くりいむしちゅー、ダイアンなど</li>
+            <li><span id="name">キングダム</span>にめっちゃハマっています！高校生の時に中国史の勉強もっとやっておけばよかったと後悔しました、、、</li>
+            <li><span id="name">洋ロック</span>好きです！特にNirvana, Foofighters, Queenなどなど</li>
+            <li>お笑い芸人のラジオを聴くのも好きです！特にロバート、くりいむしちゅー、ダイアンなど</li>
             <br>
-            どれか一つでも共通点あれば気軽に話しかけてください！
           </ol>
           </p>
         </section>
@@ -65,7 +70,7 @@
             <h3>HTML/CSS</h3>
             <div class="skill-bar">
               <div class="skill-progress" data-progress="60">
-                <span class="skill-duration">9か月</span>
+                <span class="skill-duration">1年</span>
               </div>
             </div>
           </div>
@@ -73,7 +78,7 @@
             <h3>JavaScript</h3>
             <div class="skill-bar">
               <div class="skill-progress" data-progress="60">
-                <span class="skill-duration">9か月</span>
+                <span class="skill-duration">1年</span>
               </div>
             </div>
           </div>
@@ -81,15 +86,15 @@
             <h3>Python(Django)</h3>
             <div class="skill-bar">
               <div class="skill-progress" data-progress="60">
-                <span class="skill-duration">8か月</span>
+                <span class="skill-duration">1年</span>
               </div>
             </div>
           </div>
           <div class="skill">
             <h3>JAVA</h3>
             <div class="skill-bar">
-              <div class="skill-progress" data-progress="20">
-                <span class="skill-duration">1か月</span>
+              <div class="skill-progress" data-progress="30">
+                <span class="skill-duration">4か月</span>
               </div>
             </div>
           </div>
@@ -97,8 +102,7 @@
 
         <section id="message">
           <h2>ひとこと</h2>
-          <p>一緒に最高のアプリ作っていきましょう！ <br>
-            最高の3日間にあるよう全力でサポートします！
+          <p>悔いのない3年にするために、全力で頑張ります！！
           </p>
         </section>
 

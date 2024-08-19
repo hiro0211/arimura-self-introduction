@@ -8,6 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   });
 
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  mobileMenuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+    mobileMenuToggle.classList.toggle('active');
+  });
+
+  // ウィンドウのリサイズ時にモバイルメニューを閉じる
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      mainNav.classList.remove('active');
+      mobileMenuToggle.classList.remove('active');
+    }
+  });
+
   // スクロールアニメーション
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver((entries) => {
